@@ -710,3 +710,70 @@ footer {
   box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
   color: #fff;
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  /* Navigation */
+  .mobile-menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* Typography */
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+  .hero-content p {
+    font-size: 1rem !important;
+  }
+  .section-title, .who-we-are-box h2 {
+    font-size: 2rem !important;
+  }
+  .page-header h1 {
+    font-size: 2.2rem !important;
+  }
+  .page-header p {
+    font-size: 1.1rem !important;
+  }
+
+  /* Padding & Spacing */
+  .section {
+    padding: 60px 5% !important;
+  }
+  .page-header {
+    padding-top: 130px !important;
+    padding-bottom: 60px !important;
+  }
+  .who-we-are-box {
+    padding: 25px !important;
+  }
+  .service-detail-content {
+    padding: 30px 0 !important;
+  }
+
+  /* Layouts & Grids */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .who-we-are-content {
+    flex-direction: column !important;
+  }
+  .contact-container {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  .footer-col h4 {
+    margin-top: 20px;
+  }
+  .flip-card {
+    height: 350px !important;
+  }
+}
+
