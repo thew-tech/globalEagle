@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation - Global Eagle Consulting</title>
+  <meta name="description" content="Global Eagle Consulting business consultation packages — strategy sessions, professional consulting engagements, business assessments, custom projects, and executive advisory retainers.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .products-section {
+      padding: 80px 5%;
+      background: #f8f9fc;
+    }
+    .products-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #013686;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+    .products-section .section-sub {
+      text-align: center;
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 60px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 36px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(1,54,134,0.10);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(1,54,134,0.18);
+    }
+    .product-img-wrap {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #f0f4fa;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.05);
+    }
+    .product-info {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #013686;
+      margin-bottom: 4px;
+    }
+    .product-badge {
+      display: inline-block;
+      background: #013686;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .product-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #c0392b;
+      margin-bottom: 16px;
+    }
+    .product-desc {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 18px;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .product-includes {
+      font-size: 0.9rem;
+      color: #444;
+      margin: 0 0 18px;
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+    .product-ideal {
+      font-size: 0.85rem;
+      color: #013686;
+      background: #eef3fb;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: auto;
+    }
+    .product-ideal strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #013686;
+    }
+    .cta-section {
+      background: #013686;
+      padding: 70px 5%;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      font-weight: 800;
+    }
+    .cta-section p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+    .cta-section .btn-white {
+      background: #fff;
+      color: #013686;
+      padding: 14px 36px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .cta-section .btn-white:hover {
+      background: #f0f4ff;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .products-section h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app-header"></div>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background-color: #013686; padding-top: 180px; padding-bottom: 120px; border-bottom: none;">
+    <div class="animate-on-scroll">
+      <h1 style="color: #ffffff; font-size: 3.5rem; margin-bottom: 15px;">Consultation</h1>
+      <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.3rem; max-width: 700px; margin: 0 auto; font-weight: 300;">Focused strategic guidance, tailored to where your business is today.</p>
+    </div>
+  </section>
+
+  <!-- Consultation Packages -->
+  <section class="products-section">
+    <h2>Consulting Packages</h2>
+    <p class="section-sub">From a single strategy session to an ongoing executive partnership — choose the level of engagement that fits your business.</p>
+
+    <div class="products-grid">
+
+      <!-- Strategy Session -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Strategy Session">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Strategy Session</div>
+          <span class="product-badge">30-Minute Consultation</span>
+          <div class="product-price">$150</div>
+          <div class="product-desc">Whether you're launching a new venture, navigating a business challenge, or exploring opportunities for growth, this one-on-one strategy session provides focused guidance tailored to your goals. During this 30-minute consultation, we'll discuss your current situation, identify key priorities, and provide practical recommendations you can begin implementing immediately.</div>
+          <div class="product-ideal">
+            <strong>Ideal for:</strong>
+            Business owners, entrepreneurs, startups, and organizations seeking professional guidance before committing to a larger consulting engagement.
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Consulting -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Business Consulting">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Business Consulting</div>
+          <span class="product-badge">Professional Consulting Engagement</span>
+          <div class="product-price">$500</div>
+          <div class="product-desc">A comprehensive consulting session designed to help businesses overcome operational challenges, improve efficiency, and develop strategic solutions for long-term success. Every engagement is tailored to your organization's specific objectives and concludes with actionable recommendations to help move your business forward.</div>
+          <div class="product-ideal">
+            <strong>Ideal for:</strong>
+            Companies seeking experienced business guidance, operational insight, or executive-level strategic support.
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Assessment -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Business Assessment">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Business Assessment</div>
+          <span class="product-badge">Strategic Review &amp; Action Plan</span>
+          <div class="product-price">Starting at $1,250</div>
+          <div class="product-desc">Gain a comprehensive evaluation of your business with an in-depth assessment of your operations, organizational structure, processes, and growth opportunities. Following the assessment, you'll receive a customized strategic action plan outlining practical recommendations designed to improve efficiency, strengthen operations, and support sustainable growth.</div>
+          <ul class="product-includes">
+            <li>Business operations review</li>
+            <li>Process evaluation</li>
+            <li>Growth opportunity analysis</li>
+            <li>Strategic recommendations</li>
+            <li>Written action plan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Operational Excellence Project -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" alt="Operational Excellence Project">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Operational Excellence Project</div>
+          <span class="product-badge">Custom Consulting Project</span>
+          <div class="product-price">Starting at $2,500</div>
+          <div class="product-desc">For organizations looking to solve larger operational challenges, this project-based engagement provides hands-on consulting tailored to your business objectives. Whether you're improving internal systems, developing standard operating procedures, streamlining workflows, implementing technology, or preparing for growth, every project is customized to your organization's needs.</div>
+          <div class="product-ideal">
+            Project scope and pricing are determined following an initial consultation.
+          </div>
+        </div>
+      </div>
+
+      <!-- Executive Advisory -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" alt="Executive Advisory">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Executive Advisory</div>
+          <span class="product-badge">Monthly Strategic Retainer</span>
+          <div class="product-price">Starting at $3,000<span style="font-size:1rem; font-weight:600;">/mo</span></div>
+          <div class="product-desc">Designed for organizations that value ongoing executive guidance, this monthly advisory service provides direct access to experienced strategic consulting throughout the month. Rather than engaging a consultant only when challenges arise, you'll have a trusted advisor available to help navigate decisions, evaluate opportunities, and maintain forward momentum.</div>
+          <div class="product-ideal">
+            Services may include recurring strategy meetings, operational planning, business development guidance, executive decision support, and priority consulting access.
+          </div>
+        </div>
+      </div>
+
+      <!-- Strategic Growth Partnership -->
+      <div class="product-card animate-on-scroll">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" alt="Strategic Growth Partnership">
+        </div>
+        <div class="product-info">
+          <div class="product-name">Strategic Growth Partnership</div>
+          <span class="product-badge">Executive Consulting Retainer</span>
+          <div class="product-price">Starting at $5,000<span style="font-size:1rem; font-weight:600;">/mo</span></div>
+          <div class="product-desc">Our highest level of consulting engagement is designed for organizations seeking a long-term strategic partner. Global Eagle Consulting works alongside your leadership team to provide executive-level insight, strategic planning, organizational development, project oversight, and ongoing business advisory services that support sustainable growth and long-term success.</div>
+          <div class="product-ideal">
+            This engagement is customized to the unique goals and priorities of each organization.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us to book a session or discuss which consulting package is the right fit for your business.</p>
+    <a href="contact" class="btn-white">Book a Consultation</a>
+  </section>
+
+  <div id="app-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

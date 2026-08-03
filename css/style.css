@@ -117,6 +117,57 @@ header.scrolled {
   color: var(--accent);
 }
 
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-item-dropdown > .nav-item {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 10px 0;
+  margin-top: 15px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(10, 25, 47, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 1001;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.dropdown-menu li a::after {
+  display: none;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(23, 87, 158, 0.08);
+  color: var(--accent);
+}
+
 .mobile-menu-btn {
   display: none;
   color: var(--primary);
@@ -802,5 +853,228 @@ footer {
   .flip-card {
     height: 350px !important;
   }
+
+  /* Dropdown is hover-only and has no touch equivalent; disable it on
+     mobile so a tap can't leave it stuck open, overlapping the stacked
+     menu items below it. */
+  .dropdown-menu {
+    display: none !important;
+  }
 }
+
+/* --- Product Inquiry Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.7); /* Match --primary navy with opacity */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-container {
+  background: var(--secondary);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(10, 25, 47, 0.25);
+  max-width: 550px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 35px;
+  border: 1px solid var(--glass-border);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  background: rgba(10, 25, 47, 0.05);
+  color: var(--primary);
+  transform: rotate(90deg);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+
+.modal-product-preview {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f8fafc;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.modal-product-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+
+.modal-product-details h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.modal-product-details p {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.modal-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .modal-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.modal-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modal-form .form-control {
+  padding: 12px 15px;
+}
+
+.modal-form textarea.form-control {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.modal-submit-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+}
+
+.modal-submit-btn:hover {
+  background: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+/* Success screen styles */
+.modal-success-screen {
+  display: none;
+  text-align: center;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-success-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  animation: scaleUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-success-screen h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.modal-success-screen p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+
+/* Make product cards hover-pointer */
+.product-card {
+  cursor: pointer;
+}
+
 
